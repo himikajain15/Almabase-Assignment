@@ -1,0 +1,9 @@
+BudgetBuddy provides an API for personal budget tracking, allowing users to categorize expenses, set savings goals, and analyze spending. The service is aimed at small businesses and freelancers.
+
+Data retention: we store transactional data for 7 years to comply with financial reporting requirements. User credentials are hashed and stored using bcrypt. We utilize TLS for data in transit.
+
+Pricing: subscription-based; basic tier is free, pro tier $9.99/month.
+
+Customers can request data deletion via support@budgetbuddy.example.com. Incident response plan includes 24/7 monitoring and notification within 72 hours.
+
+We comply with GDPR and CCPA.

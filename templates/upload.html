@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="columns is-centered">
+  <div class="column is-half">
+    <div class="card reveal">
+      <header class="card-header">
+        <p class="card-header-title">Upload {{ type }}</p>
+      </header>
+      <div class="card-content">
+        <p class="subtitle">Drop your file and continue to generation.</p>
+        <p class="has-text-grey mb-4">Supported formats: <strong>.txt</strong>, <strong>.pdf</strong>, <strong>.xlsx</strong></p>
+        <form method="post" enctype="multipart/form-data">
+          <div class="field">
+            <div class="control">
+              <input class="input" type="file" name="file" required>
+            </div>
+          </div>
+          <div class="field mt-5">
+            <div class="control">
+              <button class="button is-primary">Upload</button>
+              <a class="button is-light" href="{{ url_for('dashboard') }}">Back</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

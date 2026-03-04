@@ -1,0 +1,6 @@
+BudgetBuddy Product & Operations Overview
+
+BudgetBuddy is a SaaS platform and API for personal budget tracking, spend categorization, and savings goal planning.
+The service is delivered as a multi-tenant cloud platform in AWS.
+The production API has a monthly uptime target of 99.9%.
+Customer records are retained for 7 years by default to support audit and reporting use cases.

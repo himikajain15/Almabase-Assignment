@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="landing-shell">
+  <div class="container has-text-centered reveal">
+    <p class="tag is-medium" style="background: rgba(0,216,255,.16); color:#b8f5ff; border:1px solid rgba(0,216,255,.4);">Assignment Showcase Build</p>
+    <h1 class="title is-1 mt-4">AI Questionnaire Studio</h1>
+    <h2 class="subtitle is-3">Upload references, generate draft answers, refine quickly, and export cleanly.</h2>
+    <p class="mt-5 buttons is-centered">
+      <a class="button is-primary is-large" href="{{ url_for('login') }}">Login</a>
+      <a class="button is-link is-large" href="{{ url_for('register') }}">Register</a>
+    </p>
+    <div class="glass-line mt-5">
+      <p class="has-text-grey">Built to make your submission look polished and professional.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

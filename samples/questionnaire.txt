@@ -1,0 +1,12 @@
+1. What product does BudgetBuddy provide to customers?
+2. Which deployment model does BudgetBuddy use?
+3. How does BudgetBuddy encrypt customer data at rest and in transit?
+4. What is the default data retention period for customer records?
+5. What backup frequency and recovery targets are defined?
+6. Which authentication methods are supported for user access?
+7. What single sign-on standard is available for enterprise tenants?
+8. What is BudgetBuddy's incident response notification timeline?
+9. Which compliance certifications or frameworks does BudgetBuddy align with?
+10. How does BudgetBuddy handle role-based access control?
+11. What SLA uptime commitment is provided for the production API?
+12. Which cloud provider hosts the production platform?

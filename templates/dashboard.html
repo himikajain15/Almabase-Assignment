@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="mb-5 reveal">
+  <h1 class="title">Dashboard</h1>
+  <p class="subtitle">Welcome back, <strong>{{ current_user.username }}</strong>. Build your answer pack below.</p>
+</div>
+
+<div class="columns">
+  <div class="column">
+    <div class="box reveal delay-1">
+      <h2 class="subtitle">Questionnaires</h2>
+      {% if questionnaires %}
+      <ul>
+        {% for q in questionnaires %}
+          <li class="mb-3 glass-line">
+            <div class="level is-mobile">
+              <div class="level-left">
+                <div class="level-item">
+                  <span>{{ q.filename }}</span>
+                </div>
+              </div>
+              <div class="level-right">
+                <div class="level-item buttons are-small">
+                  <a class="button is-link generate-link" href="{{ url_for('generate', qid=q.id) }}">Generate</a>
+                  <a class="button is-danger" href="{{ url_for('delete_questionnaire', qid=q.id) }}">Delete</a>
+                </div>
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+        <p class="has-text-grey">No questionnaires yet.</p>
+      {% endif %}
+      <p class="mt-4">
+        <a class="button is-primary is-small" href="{{ url_for('upload_questionnaire') }}">Upload Questionnaire</a>
+      </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="box reveal delay-2">
+      <h2 class="subtitle">Reference Documents</h2>
+      {% if references %}
+      <ul>
+        {% for r in references %}
+          <li class="mb-3 glass-line">
+            <div class="level is-mobile">
+              <div class="level-left">
+                <div class="level-item">{{ r.filename }}</div>
+              </div>
+              <div class="level-right">
+                <a class="button is-small is-danger" href="{{ url_for('delete_reference', rid=r.id) }}">Delete</a>
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+        <p class="has-text-grey">No reference documents yet.</p>
+      {% endif %}
+      <p class="mt-4">
+        <a class="button is-primary is-small" href="{{ url_for('upload_reference') }}">Upload Reference</a>
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}

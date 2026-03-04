@@ -1,0 +1,6 @@
+BudgetBuddy Access & Identity Policy
+
+User authentication supports email/password plus optional MFA using authenticator apps.
+Single Sign-On is available for enterprise tenants through SAML 2.0.
+Role-based access control (RBAC) includes Admin, Analyst, and Viewer roles.
+Least-privilege access is enforced for production systems and internal support tooling.

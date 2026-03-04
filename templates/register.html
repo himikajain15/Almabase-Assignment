@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="columns is-centered is-vcentered" style="min-height: 62vh;">
+  <div class="column is-4-desktop is-6-tablet">
+    <div class="box reveal">
+      <h1 class="title has-text-centered">Create Account</h1>
+      <p class="subtitle has-text-centered">Start building standout submissions.</p>
+      <form method="post">
+        <div class="field">
+          <label class="label">Username</label>
+          <div class="control"><input class="input" type="text" name="username" required></div>
+        </div>
+        <div class="field">
+          <label class="label">Password</label>
+          <div class="control"><input class="input" type="password" name="password" required></div>
+        </div>
+        <div class="field mt-5"><button class="button is-primary is-fullwidth">Register</button></div>
+      </form>
+      <p class="has-text-centered mt-4">Already registered? <a href="{{ url_for('login') }}">Login</a></p>
+    </div>
+  </div>
+</div>
+{% endblock %}

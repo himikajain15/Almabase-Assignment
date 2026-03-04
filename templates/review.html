@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="reveal">
+  <h1 class="title">Review Answers</h1>
+  <p class="subtitle">Tune responses, then export your final submission.</p>
+</div>
+{% if total is defined %}
+<div class="box reveal delay-1">
+  <p class="coverage-metrics"><strong>Coverage:</strong> {{ total }} questions | {{ with_cite }} with citations | {{ not_found }} not found</p>
+</div>
+{% endif %}
+<form method="post">
+  {% for ans in answers %}
+    <div class="card mb-5 reveal delay-2">
+      <header class="card-header">
+        <p class="card-header-title">Question</p>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          {{ ans.question }}
+        </div>
+        <p><strong>Citations:</strong> {{ ans.citations or "None" }}</p>
+        {% if ans.confidence is not none %}
+        <p class="has-text-grey">Confidence: {{ '%.0f%%' % (ans.confidence*100) }}</p>
+        {% endif %}
+        <textarea class="textarea" name="answer_{{ ans.id }}" rows="4">{{ ans.answer }}</textarea>
+      </div>
+      <footer class="card-footer">
+        <a href="{{ url_for('regenerate', ans_id=ans.id) }}" class="card-footer-item button is-small is-info">Regenerate</a>
+      </footer>
+    </div>
+  {% endfor %}
+  <div class="field is-grouped reveal delay-3">
+    <div class="control">
+      <button class="button is-primary">Save and Export</button>
+    </div>
+    <div class="control">
+      <a class="button is-light" href="{{ url_for('dashboard') }}">Cancel</a>
+    </div>
+  </div>
+</form>
+{% endblock %}
