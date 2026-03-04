@@ -4,8 +4,8 @@ End-to-end Flask application for automating structured questionnaire responses u
 
 ## Live App
 
-- Live URL: `ADD_YOUR_DEPLOYED_URL_HERE`
-- Suggested deploy target included in repo: `render.yaml` + `Procfile`
+- Live URL: `https://almabase-assignment-phi.vercel.app/`
+- Deployment config included: `vercel.json` + `api/index.py`
 
 ## Repository
 
@@ -109,14 +109,14 @@ Open:
 
 `http://127.0.0.1:5000`
 
-## Deployment (Render Example)
+## Deployment (Vercel)
 
 This repo includes:
-- `render.yaml`
-- `Procfile`
+- `vercel.json`
+- `api/index.py`
 
 Deploy steps:
 1. Push repo to GitHub
-2. Create Render web service from repo
-3. Set env vars `OPENAI_API_KEY` and `SECRET_KEY`
-4. Copy deployed URL into the **Live App** section above
+2. Import project in Vercel
+3. Set env vars `OPENAI_API_KEY`, `SECRET_KEY`, and `DATABASE_URL`
+4. Deploy and copy the production URL into the **Live App** section above
