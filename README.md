@@ -109,14 +109,5 @@ Open:
 
 `http://127.0.0.1:5000`
 
-## Deployment (Vercel)
 
-This repo includes:
-- `vercel.json`
-- `api/index.py`
 
-Deploy steps:
-1. Push repo to GitHub
-2. Import project in Vercel
-3. Set env vars `OPENAI_API_KEY`, `SECRET_KEY`, and `DATABASE_URL`
-4. Deploy and copy the production URL into the **Live App** section above
